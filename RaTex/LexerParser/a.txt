@@ -1,0 +1,226 @@
+local tokens = {
+    --#[ Special characters ]#--
+
+    ["#"] = true;
+    ["$"] = true;
+    ["%"] = true;
+    ["^"] = true;
+    ["&"] = true;
+    ["_"] = true;
+    ["{"] = true;
+    ["}"] = true;
+    ["~"] = true;
+    ["\\"] = true;
+
+    --#[ Operators ]#--
+
+    ["+"] = true;
+    ["-"] = true;
+    ["*"] = true;
+    ["/"] = true;
+    times = true;
+    div = true;
+    cdot = true;
+    pm = true;
+    mp = true;
+
+    --#[ Radicals ]#--
+
+    surd = true;
+    sqrt = true;
+    frac = true;
+    cfrac = true;
+    dfrac = true;
+    over = true;
+
+    --#[ Standard numerical functions ]#--
+
+    exp = true;
+    exp_ = true;
+    ln = true;
+    log = true;
+    lg = true;
+    sin = true;
+    cos = true;
+    tan = true;
+    cot = true;
+    sec = true;
+    csc = true;
+    sinh = true;
+    cosh = true;
+    tanh = true;
+    sinc = true;
+    cosc = true;
+    tanc = true;
+    arcsin = true;
+    arccos = true;
+    arctan = true;
+    arccot = true;
+    arcsec = true;
+    arccsc = true;
+    arcsinh = true;
+    arccosh = true;
+    arctanh = true;
+    arcsinc = true;
+    arccosc = true;
+    arctanc = true;
+
+    --#[ Sets ]#--
+    ["0"] = true;
+    empty = true;
+    emptyset = true;
+    varnothing = true;
+    ["in"] = true;
+    ["not"] = true;
+    ni = true;
+    cap = true;
+    cup = true;
+    subset = true;
+    supset = true;
+    subseteq = true;
+    nsubseteq = true;
+    supseteq = true;
+    nsupseteq = true;
+
+    --#[ Relations ]#--
+
+    ["="] = true;
+    ne = true;
+    neq = true;
+    equiv = true;
+    sim = true;
+    nsim = true;
+    simeq = true;
+    approx = true;
+    approxeq = true;
+    propto = true;
+    ["<"] = true;
+    nless = true;
+    [">"] = true;
+    ngtr = true;
+    le = true;
+    leq = true;
+    ge = true;
+    geq = true;
+    leqslant = true;
+    geqslant = true;
+
+    --#[ Geometric ]#--
+
+    perp = true;
+    angle = true;
+    circ = true;
+    box = true;
+    square = true;
+    diamond = true;
+    bigcirc = true;
+    triangle = true;
+
+    --#[ Logic ]#--
+
+    forall = true;
+    exists = true;
+    nexists = true;
+    therefore = true;
+    because = true;
+    And = true;
+    lor = true;
+    land = true;
+    bar = true;
+    overline = true;
+
+    --#[ Arrows ]#--
+
+    Rrightarrow = true;
+    Lleftarrow = true;
+    Rightarrow = true;
+    nRightarrow = true;
+    Longrightarrow = true;
+    Leftarrow = true;
+    nLeftarrow = true;
+    Longleftarrow = true;
+    Leftrightarrow = true;
+    nLeftrightarrow = true;
+    Longleftrightarrow = true;
+    Uparrow = true;
+    Downarrow = true;
+    Updownarrow = true;
+    rightarrow = true;
+    to = true;
+    nrightarrow = true;
+    longrightarrow = true;
+    leftarrow = true;
+    gets = true;
+    nleftarrow = true;
+    longleftarrow = true;
+    uparrow = true;
+    downarrow = true;
+    updownarrow = true;
+    mapsto = true;
+    longmapsto = true;
+    ldots = true;
+    cdots = true;
+
+    --#[ Other ]#--
+    Overbraces = true;
+    Underbraces = true;
+    sum_ = true;
+    prod_ = true;
+    coprod_ = true;
+    lim_ = true;
+    limits_ = true;
+    int = true;
+    int_ = true;
+    iint = true;
+    iiint = true;
+    iiiint = true;
+    bigcap_ = true;
+    bigcup_ = true;
+    cancel = true;
+
+    --#[ White spaces and Text ]#--
+
+    quad = true;
+    qquad = true;
+    [" "] = true;
+    [";"] = true;
+    [","] = true;
+    ["!"] = true;
+
+    text = true;
+
+    --#[ Characters ]#--
+
+    alpha = true;
+    beta = true;
+    gamma = true;
+    delta = true;
+    epsilon = true;
+    varepsilon = true;
+    zeta = true;
+    eta = true;
+    theta = true;
+    vartheta = true;
+    iota = true;
+    kappa = true;
+    lambda = true;
+    mu = true;
+    nu = true;
+    xi = true;
+    pi = true;
+    varpi = true;
+    rho = true;
+    varrho = true;
+    sigma = true;
+    varsigma = true;
+    tau = true;
+    upsilon = true;
+    phi = true;
+    varphi = true;
+    chi = true;
+    psi = true;
+    omega = true;
+
+    infty = true;
+
+}
